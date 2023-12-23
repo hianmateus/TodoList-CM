@@ -1,4 +1,26 @@
 
+/* Opcacidade na tela */
+
+function Open(params) {
+    const maskOpen = document.querySelector('.maskOpen')
+
+    maskOpen.style.opacity = 0
+
+    let i = 0
+    while (i < 1000) {
+        i++
+    }
+
+    if (i > 999) {
+        maskOpen.style.zIndex = -1
+    }
+    
+    
+}
+
+Open()
+
+
 /* Monstrando trabalhos*/
 
 const WoData = document.querySelector('.formwork1')
@@ -10,30 +32,43 @@ const formObs = document.getElementById('formObs')
 
 
 function ShowWork(params) {
-    const li = document.querySelectorAll('li')
-    const mask1 = document.getElementById('mask')
+    const allLi = document.querySelectorAll('li')
 
-    li.forEach( (li, index) => {
+    allLi.forEach( (li, index) => {
 
         li.addEventListener('click', e => {
-            li.querySelector(".maskNone").classList.remove("maskNone")
-            li.classList.add('maskFlex')
+            li.querySelector(".mask").style.display = "flex"
+            
         })
     })
     
 
 }
 function BackW(params) {
-    let mask1 = document.getElementById('mask')
+    const allLi = document.querySelectorAll('li')
     
-    mask1.classList.remove('maskFlex')
-    mask1.classList.add('maskNone')
+    allLi.forEach( (li, index) => {
+
+        li.addEventListener('click', e => {
+            li.querySelector(".mask").style.display = "none"
+            
+        })
+    })
 }
-function CloseWork(params) {
-    let mask1 = document.getElementById('mask')
+function CloseWork(position) {
+    const allLi = document.querySelectorAll('li')
     
-    mask1.classList.remove('maskFlex')
-    mask1.classList.add('maskNone')
+    allLi.forEach( (li, index) => {
+
+        li.addEventListener('click', e => {
+            li.querySelector(".mask").style.display = "none"
+            
+        })
+    })
+
+    mylisttask[position].checked = !mylisttask[position].checked
+
+    showtasks()
 }
 
 function deletetask(position) {
@@ -79,7 +114,7 @@ function CreateWork(params) {
     mask2.style.display = "none"    
 
     mylisttask.push({
-        key: Math.random(),
+        checked: false,
         Data: ipData.value,
         Name: ipName.value,
         Laminas: ipLaminas.value,
@@ -103,8 +138,8 @@ function showtasks(params) {
 
     mylisttask.forEach((item, position) => {
 
-        newli = newli + `<li>
-        <div class="BoxWork" onclick="ShowWork()">
+        newli = newli + `<li class="li">
+        <div class="BoxWork ${item.checked && "done"}" onclick="ShowWork()">
             <div class="box-principal">
                 <button class="image-camera"> <i class='bx bxs-camera'></i> </button>
                 <div class="box-inputs">
@@ -115,7 +150,7 @@ function showtasks(params) {
             <button class="trash" onclick="deletetask(${position})"> <i class='bx bxs-trash-alt'></i> </button>
         </div>
 
-        <div id="mask" class="maskNone">
+        <div class="mask">
                     <div class="form">
                         <div class="formBoxPrincipal">
                             <button class="formImage"><i class='bx bxs-camera'></i></button>
@@ -131,7 +166,7 @@ function showtasks(params) {
                 
                         <div class="formButtons">
                             <button class="formBack" onclick="BackW()" ><i class='bx bx-arrow-back'></i></button>
-                            <button class="formCheck" onclick="CloseWork()" ><i class='bx bx-check'></i></button>
+                            <button class="formCheck" onclick="CloseWork(${position})" ><i class='bx bx-check'></i></button>
                         </div>
                     </div>
                 </div>

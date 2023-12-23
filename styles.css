@@ -63,7 +63,17 @@ ul {
     list-style: none;
 }
 
-.maskNone {
+.maskOpen {
+    height: 100%;
+    width: 100%;
+    background-color: white;
+    position: absolute;
+    z-index: 3;
+    opacity: 1;
+    transition: ease 2s;
+}
+
+.mask {
     position: absolute;
     top: 0;
     left: 0;
@@ -75,19 +85,20 @@ ul {
     rgba(10, 12, 16, 0.15) 50%, rgba(10, 12, 16, 0.29) 85%);
     display: none;
 }
-.maskFlex {
-    position: absolute;
-    top: 0;
-    left: 0;
-    display: flex;
-    height: 844px;
-    width: 390px;
-    justify-content: center;
-    align-items: center;
-    background: linear-gradient(109deg, rgba(10, 12, 16, 0.29) 15%, 
-    rgba(10, 12, 16, 0.15) 50%, rgba(10, 12, 16, 0.29) 85%);
-}
 
+.done {
+    display: flex;
+    height: 110px;
+    width: 270px;
+    padding: 0 10px;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: solid 1px rgb(160, 160, 160);
+    cursor: pointer;
+    background-color: #fffd9e;
+    border-radius: 10px
+    
+}
 
 .form {
     display: flex;
@@ -285,10 +296,12 @@ ul {
     display: flex;
     height: 110px;
     width: 270px;
+    padding: 0 10px;
     align-items: center;
     justify-content: space-between;
     border-bottom: solid 1px rgb(160, 160, 160);
     cursor: pointer;
+    margin-top: 10px;
 }
 
 .image-camera {
