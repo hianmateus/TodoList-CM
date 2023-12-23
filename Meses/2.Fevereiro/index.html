@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="../../styles.css">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <main>
+
+        <div class="maskOpen"></div>
+
+        <header>
+            <img src="../../imgs/logoImage.png" alt="logo-empresa-image">
+            <h1>Fevereiro</h1>
+            <button class="menu" onclick="OpenMenuMonths()"> <i class='bx bx-menu'></i> </button>
+
+
+
+        </header>
+
+        <section class="SelectMenu" style="z-index: -2;">
+
+            <div class="sectionButton">
+                <button>Meses</button>
+            </div>
+
+            <ul class="sectionUl">
+                <li class="sectionLi">
+                    <a href="http://127.0.0.1:5500/Meses/1.Janeiro/index.html" onclick="Open()">Janeiro</a>
+                </li>
+                <li class="sectionLi">
+                    <a href="http://127.0.0.1:5500/Meses/2.Fevereiro/index.html" onclick="Open()">Fevereiro</a>
+                </li>
+                <li class="sectionLi">
+                    <a href="http://127.0.0.1:5500/Meses/3.Mar%C3%A7o/index.html" onclick="Open()">Março</a>
+                </li>
+                <li class="sectionLi">
+                    <a href="http://127.0.0.1:5500/Meses/4.Abril/index.html" onclick="Open()">Abril</a>
+                </li>
+                <li class="sectionLi">
+                    <a href="http://127.0.0.1:5500/Meses/5.Maio/index.html" onclick="Open()">Maio</a>
+                </li>
+                <li class="sectionLi">
+                    <a href="http://127.0.0.1:5500/Meses/6.Junho/index.html" onclick="Open()">Junho</a>
+                </li>
+                <li class="sectionLi">
+                    <a href="http://127.0.0.1:5500/Meses/7.Julho/index.html" onclick="Open()">Julho</a>
+                </li>
+                <li class="sectionLi">
+                    <a href="http://127.0.0.1:5500/Meses/8.Agosto/index.html" onclick="Open()">Agosto</a>
+                </li>
+                <li class="sectionLi">
+                    <a href="http://127.0.0.1:5500/Meses/9.Setembro/index.html" onclick="Open()">Setembro</a>
+                </li>
+                <li class="sectionLi">
+                    <a href="http://127.0.0.1:5500/Meses/10.Outubro/index.html" onclick="Open()">Outubro</a>
+                </li>
+                <li class="sectionLi">
+                    <a href="http://127.0.0.1:5500/Meses/11.Novembro/index.html" onclick="Open()">Novembro</a>
+                </li>
+                <li class="sectionLi">
+                    <a href="http://127.0.0.1:5500/Meses/12.Dezembro/index.html" onclick="Open()">Dezembro</a>
+                </li>
+            </ul>
+
+
+
+        </section>
+
+        <section>
+
+            <ul class="WorkList">
+
+
+
+            </ul>
+
+        </section>
+        <button class="AddButton"> <i class='bx bx-plus'></i> </button>
+
+        <div class="mask2">
+            <div class="form2">
+                <div class="formBoxPrincipal">
+                    <button class="formImage"><i class='bx bxs-camera'></i></button>
+                    <div class="forminputs">
+                        <input class="forminput1" placeholder="Data" type="text">
+                        <input class="forminput2" placeholder="Nome" type="text">
+                        <input class="forminput3" placeholder="Laminas" type="text">
+                        <input class="forminput4" placeholder="Tesouras" type="text">
+                    </div>
+                </div>
+
+                <textarea class="workObs" name="workObs" id="workObs" cols="30" rows="10"></textarea>
+
+                <div class="formButtons">
+                    <button class="formBack2"><i class='bx bx-arrow-back'></i></button>
+                    <button class="formCheck2"><i class='bx bx-check'></i></button>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+</body>
+<script src="../../scripts.js"></script>
+
+</html>
