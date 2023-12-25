@@ -70,12 +70,11 @@ img {
     padding: 10px 0;
     border-bottom: solid 1px rgb(206, 206, 206);
 }
-.sectionButton button {
+.sectionButton a {
     font-size: 20px;
-    width: 130px;
-    height: 30px;
-    border: none;
     cursor: pointer;
+    text-decoration-line: none;
+    color: black;
 }
 
 .sectionUl {

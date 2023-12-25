@@ -51,7 +51,7 @@ const WoData = document.querySelector('.formwork1')
 const WoName = document.querySelector('.formwork2')
 const WoLaminas = document.querySelector('.formwork3')
 const WoTesouras = document.querySelector('.formwork4')
-const formObs = document.getElementById('formObs')
+
 
 
 
@@ -81,6 +81,7 @@ function BackW(params) {
 }
 function CloseWork(position) {
     const allLi = document.querySelectorAll('li')
+
     
     allLi.forEach( (li, index) => {
 
@@ -90,7 +91,11 @@ function CloseWork(position) {
         })
     })
 
+    
+    
+
     mylisttask[position].checked = !mylisttask[position].checked
+
 
     showtasks()
 }
@@ -135,7 +140,7 @@ function Back(params) {
 let mylisttask = []
 
 function CreateWork(params) {
-    mask2.style.display = "none"    
+    mask2.style.display = "none"
 
     mylisttask.push({
         checked: false,
@@ -143,7 +148,7 @@ function CreateWork(params) {
         Name: ipName.value,
         Laminas: ipLaminas.value,
         Tesouras: ipTesouras.value,
-        Obs: workObs.value
+        Obs: workObs.value 
     })
 
     console.log(mylisttask)
