@@ -232,6 +232,8 @@ function showtasks(params) {
     `
     })
 
+    localStorage.setItem('works', JSON.stringify(mylisttask))
+
     WorkList.innerHTML = newli
 }
 
@@ -240,6 +242,20 @@ AddButton.addEventListener('click', OpenFormWork)
 BackButton.addEventListener('click', Back)
 ButtonCreateWork.addEventListener('click', CreateWork)
 
+/* Salvar itens */
+
+function ChargeWorks(params) {
+    const WorksLocalStorage = localStorage.getItem('works')
+
+    if (WorksLocalStorage) {
+        mylisttask = JSON.parse(WorksLocalStorage)
+    }
+    
+
+    showtasks()
+}
+
+ChargeWorks()
 
 /* <li>
                     <div class="BoxWork" >
