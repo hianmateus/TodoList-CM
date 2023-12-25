@@ -14,8 +14,8 @@ function Open(params) {
     if (i > 999) {
         maskOpen.style.zIndex = -1
     }
-    
-    
+
+
 }
 
 Open()
@@ -31,7 +31,7 @@ function OpenMenuMonths(params) {
     } else {
         Menu.style.zIndex = -2
     }
-    
+
 }
 
 function CloseMenuMonths(params) {
@@ -42,7 +42,7 @@ function CloseMenuMonths(params) {
     if (MenuZindex > 0) {
         MenuZindex = -2
     }
-    
+
 }
 
 /* Monstrando trabalhos*/
@@ -58,41 +58,65 @@ const WoTesouras = document.querySelector('.formwork4')
 function ShowWork(params) {
     const allLi = document.querySelectorAll('li')
 
-    allLi.forEach( (li, index) => {
+    allLi.forEach((li, index) => {
 
         li.addEventListener('click', e => {
             li.querySelector(".mask").style.display = "flex"
-            
+
         })
     })
-    
+
 
 }
 function BackW(params) {
     const allLi = document.querySelectorAll('li')
-    
-    allLi.forEach( (li, index) => {
+    let WoData = document.querySelector('.formwork1')
+    let WoName = document.querySelector('.formwork2')
+    let WoLaminas = document.querySelector('.formwork3')
+    let WoTesouras = document.querySelector('.formwork4')
+    let formObs = document.getElementById('formObs')
+
+    allLi.forEach((li, index) => {
 
         li.addEventListener('click', e => {
             li.querySelector(".mask").style.display = "none"
-            
+
         })
     })
+
+    mylisttask.map(item => {
+        item.Data = WoData.value
+        item.Name = WoName.value
+        item.Laminas = WoLaminas.value
+        item.Tesouras = WoTesouras.value
+        item.Obs = formObs.value
+    })
+
+    
 }
 function CloseWork(position) {
     const allLi = document.querySelectorAll('li')
+    let WoData = document.querySelector('.formwork1')
+    let WoName = document.querySelector('.formwork2')
+    let WoLaminas = document.querySelector('.formwork3')
+    let WoTesouras = document.querySelector('.formwork4')
+    let formObs = document.getElementById('formObs')
 
-    
-    allLi.forEach( (li, index) => {
+    allLi.forEach((li, index) => {
 
         li.addEventListener('click', e => {
             li.querySelector(".mask").style.display = "none"
-            
+
         })
     })
 
-    
-    
+    mylisttask.map(item => {
+        item.Data = WoData.value
+        item.Name = WoName.value
+        item.Laminas = WoLaminas.value
+        item.Tesouras = WoTesouras.value
+        item.Obs = formObs.value
+    })
 
     mylisttask[position].checked = !mylisttask[position].checked
 
@@ -148,7 +172,7 @@ function CreateWork(params) {
         Name: ipName.value,
         Laminas: ipLaminas.value,
         Tesouras: ipTesouras.value,
-        Obs: workObs.value 
+        Obs: workObs.value
     })
 
     console.log(mylisttask)
@@ -207,7 +231,7 @@ function showtasks(params) {
     
     `
     })
-    
+
     WorkList.innerHTML = newli
 }
 
