@@ -18,12 +18,11 @@ body {
 main {
     background-color: rgb(223, 223, 223);
     width: 390px;
-    height: 844px;
+    min-height: 844px;
     display: flex;
     flex-direction: column;
     box-shadow: rgba(0, 0, 0, 0.34) 0px 0px 50px;
     position: relative;
-    padding-bottom: 20px;
 }
 
 header {
@@ -35,6 +34,9 @@ header {
     background-color: white;
     box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
     z-index: 2;
+    position: absolute;
+    width: 390px;
+    top: 0;
 }
 
 img {
@@ -70,6 +72,7 @@ img {
     padding: 10px 0;
     border-bottom: solid 1px rgb(206, 206, 206);
 }
+
 .sectionButton a {
     font-size: 20px;
     cursor: pointer;
@@ -95,13 +98,14 @@ img {
     text-decoration-line: none;
 }
 
-section {
+.sectionList {
     width: 100%;
     background-color: white;
     display: flex;
     justify-content: center;
     padding-bottom: 15px;
     box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+    margin-top: 70px;
 }
 
 ul {
@@ -128,8 +132,8 @@ ul {
     width: 390px;
     justify-content: center;
     align-items: center;
-    background: linear-gradient(109deg, rgba(10, 12, 16, 0.29) 15%, 
-    rgba(10, 12, 16, 0.15) 50%, rgba(10, 12, 16, 0.29) 85%);
+    background: linear-gradient(109deg, rgba(10, 12, 16, 0.29) 15%,
+            rgba(10, 12, 16, 0.15) 50%, rgba(10, 12, 16, 0.29) 85%);
     display: none;
 }
 
@@ -149,7 +153,7 @@ ul {
     position: absolute;
     top: 0;
     left: 0;
-    height: 844px;
+    min-height: 100%;
     width: 390px;
     justify-content: center;
     align-items: center;
@@ -162,10 +166,10 @@ ul {
     display: flex;
     flex-direction: column;
     z-index: 2;
-    width: 90%;
     background-color: white;
     border-radius: 15px;
     padding: 8px;
+    position: fixed;
 }
 
 .formBoxPrincipal {
@@ -338,13 +342,12 @@ ul {
     cursor: pointer;
     background-color: #fffd9e;
     border-radius: 10px
-    
 }
 
 .BoxWork {
     display: flex;
     height: 110px;
-    width: 310px;
+    width: 350px;
     padding: 0 10px;
     align-items: center;
     justify-content: space-between;
@@ -407,6 +410,11 @@ ul {
     cursor: pointer;
 }
 
+.sectionAdd {
+    width: 100%;
+    height: 70px;
+}
+
 .AddButton {
     height: 40px;
     width: 40px;
@@ -417,4 +425,14 @@ ul {
     border: none;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 0px 15px;
     cursor: pointer;
+}
+
+@media screen and (width: 390px) and (height: 844px) {
+    header {
+        position: fixed;
+    }
+
+    .SelectMenu {
+        position: fixed;
+    }
 }

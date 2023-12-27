@@ -4,17 +4,18 @@
 function Open(params) {
     const maskOpen = document.querySelector('.maskOpen')
 
-    maskOpen.style.opacity = 0
 
     let i = 0
-    while (i < 1000) {
+    while (i < 100) {
         i++
     }
 
-    if (i > 999) {
+    if (i > 99) {
         maskOpen.style.zIndex = -1
     }
 
+    maskOpen.style.opacity = 1
+    maskOpen.style.opacity = 0
 
 }
 
