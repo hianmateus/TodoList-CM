@@ -243,6 +243,38 @@ AddButton.addEventListener('click', OpenFormWork)
 BackButton.addEventListener('click', Back)
 ButtonCreateWork.addEventListener('click', CreateWork)
 
+/* Abrir encontrar Itens */
+
+function FindWork(params) {
+    const ButtonFindWork = document.querySelector('.FindWork')
+    const IpFindWork = document.querySelector('.IpFindWork')
+    const Isearch = document.getElementById('Lupa')
+    
+    IpFindWork.style.display = "flex"
+    Isearch.style.display = "none"
+}
+
+/* Procurando itens */
+
+function SearchWork(params) {
+    const IpFindWork = document.querySelector('.IpFindWork')
+
+    console.log(IpFindWork.value)
+}
+
+/* Voltando interfaces */
+
+function BackInterface(params) {
+    const ButtonFindWork = document.querySelector('.FindWork')
+    const IpFindWork = document.querySelector('.IpFindWork')
+    const Isearch = document.getElementById('Lupa')
+
+    IpFindWork.style.display = "none"
+    Isearch.style.display = "flex"
+
+    IpFindWork.value = ''
+}
+
 /* Salvar itens */
 
 function ChargeWorks(params) {

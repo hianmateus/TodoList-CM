@@ -14,7 +14,7 @@
 
 <body>
 
-    <main>
+    <main onclick="BackInterface()">
 
         <div class="maskOpen"></div>
 
@@ -89,6 +89,8 @@
             <button class="AddButton"> <i class='bx bx-plus'></i> </button>
         </div>
 
+        
+
         <div class="mask2">
             <div class="form2">
                 <div class="formBoxPrincipal">
@@ -111,6 +113,8 @@
         </div>
 
     </main>
+
+    <button onclick="FindWork()" class="FindWork"> <i class='bx bx-search-alt-2' id="Lupa"></i> <input type="text" class="IpFindWork" onchange="SearchWork()"> </button>
 
 </body>
 <script src="../../scripts.js"></script>
